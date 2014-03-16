@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function gatrack()
+{
+var gatracking = "UA-1111111-01"
+var currentdate = new Date(); 
+var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+  document.getElementById("demo").innerHTML="<strong>Web site:</strong> "+gatracking+"<br /><strong>Web page:</strong> "+document.URL+"<br /><strong>Page viewed:</strong> "+datetime;
+}
+</script>
+</head>
+
+<body onload=gatrack()>
+
+<h1>Analytics tracking code</h1>
+
+<p id="demo"></p>
+
+
+</body>
+</html>
